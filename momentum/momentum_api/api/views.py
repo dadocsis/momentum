@@ -1,7 +1,8 @@
 from flask import Blueprint
 from flask_restful import Api
 
-from momentum_api.api.resources import UserResource, UserList
+from momentum_api.api.resources import (UserResource, UserList, StockResource,
+                                        StocksResources)
 
 
 blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
@@ -10,3 +11,5 @@ api = Api(blueprint)
 
 api.add_resource(UserResource, '/users/<int:user_id>')
 api.add_resource(UserList, '/users')
+api.add_resource(StockResource, '/stocks/<string:symbol>')
+api.add_resource(StocksResources, '/stocks')

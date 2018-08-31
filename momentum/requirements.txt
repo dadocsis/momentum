@@ -7,3 +7,5 @@ flask-jwt-extended
 marshmallow-sqlalchemy
 passlib
 tox
+appdirs==1.4.3
+requests

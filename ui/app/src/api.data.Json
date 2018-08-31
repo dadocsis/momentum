@@ -1,0 +1,308 @@
+{
+    "total": 227,
+    "pages": 5,
+    "next": "/api/v1/stocks?page=2&per_page=50",
+    "prev": "/api/v1/stocks?page=1&per_page=50",
+    "results": [
+        {
+            "symbol": "RARE",
+            "id": 1,
+            "name": "Ultragenyx Pharma",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "SPWH",
+            "id": 2,
+            "name": "Sportsman's Warehouse Hld",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "SPTN",
+            "id": 3,
+            "name": "Spartannash Co.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "HQY",
+            "id": 4,
+            "name": "Healthequity Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "QURE",
+            "id": 5,
+            "name": "Uniqure N.V.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "VRNS",
+            "id": 6,
+            "name": "Varonis Systems",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "SCYX",
+            "id": 7,
+            "name": "Scynexis",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "ONDK",
+            "id": 8,
+            "name": "On Deck Capital Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "NERV",
+            "id": 9,
+            "name": "Minerva Neurosciences",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "VSLR",
+            "id": 10,
+            "name": "Vivint Solar",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "TTOO",
+            "id": 11,
+            "name": "T2 Biosystems",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "SONC",
+            "id": 12,
+            "name": "Sonic Corp.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "ETSY",
+            "id": 13,
+            "name": "Etsy Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "SRDX",
+            "id": 14,
+            "name": "Surmodics",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "TLOG",
+            "id": 15,
+            "name": "Tetralogic Pharmaceutical",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "ATTU",
+            "id": 16,
+            "name": "Attunity Ltd",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "NHTC",
+            "id": 17,
+            "name": "Natural Health Trends",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "MUTHX",
+            "id": 18,
+            "name": "Franklin Mutual Shares Z",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "NSP",
+            "id": 19,
+            "name": "Insperity",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "NEWR",
+            "id": 20,
+            "name": "New Relic",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "MATX",
+            "id": 21,
+            "name": "Matson Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "PCMI",
+            "id": 22,
+            "name": "PCM Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "LOXO",
+            "id": 23,
+            "name": "Loxo Oncology",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "LHO",
+            "id": 24,
+            "name": "Lasalle Hotel Properties",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "XOXO",
+            "id": 25,
+            "name": "X O Group Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "STMP",
+            "id": 26,
+            "name": "Stamps.com Inc",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "SHAK",
+            "id": 27,
+            "name": "Shake Shack",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "MRTX",
+            "id": 28,
+            "name": "Mirati Therapeutics",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "ATHM",
+            "id": 29,
+            "name": "Autohome Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "PSIX",
+            "id": 30,
+            "name": "Power Solutions Internati",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "WPG",
+            "id": 31,
+            "name": "W P Glimcher Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "GALT",
+            "id": 32,
+            "name": "Galectin Therapeutics, In",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "I",
+            "id": 33,
+            "name": "Intelsat S.A.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "ARWR",
+            "id": 34,
+            "name": "Arrowhead Research Corp.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "BDSI",
+            "id": 35,
+            "name": "BioDelivery Sciences Inte",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "BEAT",
+            "id": 36,
+            "name": "BioTelemetry, Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "W",
+            "id": 37,
+            "name": "Wayfair Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "HGSH",
+            "id": 38,
+            "name": "China Hgs Real Estate Inc",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "RETL",
+            "id": 39,
+            "name": "Retail Index 3X",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "GFN",
+            "id": 40,
+            "name": "General Finance Corporati",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "EHTH",
+            "id": 41,
+            "name": "eHealth",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "NSTG",
+            "id": 42,
+            "name": "NanoString Technologies,",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "NEO",
+            "id": 43,
+            "name": "Neogenomics Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "HK",
+            "id": 44,
+            "name": "Halcon Resources",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "VNCE",
+            "id": 45,
+            "name": "Vince Holding Corp.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "ACRX",
+            "id": 46,
+            "name": "AcelRx Pharmaceuticals, I",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "ENTA",
+            "id": 47,
+            "name": "Enanta Pharmaceuticals, I",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "CASM",
+            "id": 48,
+            "name": "CAS Medical Systems Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "CHGG",
+            "id": 49,
+            "name": "Chegg, Inc.",
+            "save_date": "2018-06-17"
+        },
+        {
+            "symbol": "VCYT",
+            "id": 50,
+            "name": "Veracyte, Inc.",
+            "save_date": "2018-06-17"
+        }
+    ]
+}

@@ -16,7 +16,8 @@ setup(
         'flask-marshmallow',
         'marshmallow-sqlalchemy',
         'passlib',
-        'Scrapy==1.5.0'
+        'Scrapy==1.5.0',
+        'appdirs==1.4.3'
     ],
     entry_points={
         'console_scripts': [

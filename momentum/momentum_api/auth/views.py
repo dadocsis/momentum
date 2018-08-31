@@ -1,14 +1,25 @@
-from flask import request, jsonify, Blueprint
+from functools import wraps
+
+from flask import request, jsonify, Blueprint, current_app
 from flask_jwt_extended import (
     create_access_token,
     create_refresh_token,
     jwt_refresh_token_required,
-    get_jwt_identity
+    get_jwt_identity,
+    verify_jwt_in_request
 )
 
 from momentum_api.models import User
 from momentum_api.extensions import pwd_context, jwt
 
+
+def api_auth(fn):
+    @wraps(fn)
+    def wrapper(*args, **kwargs):
+        if current_app.env != 'development':
+            verify_jwt_in_request()
+        return fn(*args, **kwargs)
+    return wrapper
 
 blueprint = Blueprint('auth', __name__, url_prefix='/auth')
 

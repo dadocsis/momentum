@@ -23,10 +23,23 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rot ate(0deg); }
+  from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
 li {
   text-align: left;
+}
+
+.stocks {
+
+}
+
+.stock {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: left;
+    width: 100%;
+    margin: 1% 0% 0 1%;
 }

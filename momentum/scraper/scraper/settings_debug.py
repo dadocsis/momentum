@@ -91,4 +91,4 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-API_URL = 'tbd'
+API_URL = 'http://127.0.0.1:5000/api/v1'

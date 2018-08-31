@@ -25,16 +25,18 @@ def init():
     db.create_all()
     click.echo("done")
 
-    click.echo("create user")
-    user = User(
-        username='admin',
-        email='admin@mail.com',
-        password=os.environ['ADMINPW'],
-        active=True
-    )
-    db.session.add(user)
-    db.session.commit()
-    click.echo("created user admin")
+    click.echo("admin user")
+    user = User.query.filter_by(username='admin').first()
+    if user is None:
+        user = User(
+            username='admin',
+            email='admin@mail.com',
+            password=os.environ['ADMINPW'],
+            active=True
+        )
+        db.session.add(user)
+        db.session.commit()
+        click.echo("created user admin")
 
 
 if __name__ == "__main__":
