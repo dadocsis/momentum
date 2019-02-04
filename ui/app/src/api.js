@@ -15,3 +15,13 @@ export const getStocks = (cb) => {
     .then(json => cb(json))
 };
 
+export const postToken = (cb, code, client_id, redirect) => {
+    const data = {
+        'grant_type': 'authorization_code',
+        'access_type': 'offline',
+        'code': code,
+        'client_id': client_id,
+        'redirect_uri': client_id
+    };
+    cb(data)
+};

@@ -1,18 +1,5 @@
 import {getStocks} from "../api";
 import React, {Component} from "react";
-import { ListGroup, ListGroupItem, Table } from 'react-bootstrap';
-import PropTypes from 'prop-types';
-
-const Stock = (props) => {
-  const stock = props.data;
-  return (
-        <ListGroupItem className="list-group-item">
-      {stock.symbol}
-    </ListGroupItem>)
-};
-Stock.propTypes = {
-  data: PropTypes.object.isRequired
-};
 
 class StockList extends Component {
   state = {stocks: [] };
@@ -38,7 +25,7 @@ class StockList extends Component {
 
   render() {
     return (
-      <Table striped bordered condensed hover>
+      <table >
         <thead>
           <tr>
             <th>#</th>
@@ -50,7 +37,7 @@ class StockList extends Component {
         <tbody>
         {this.get()}
         </tbody>
-      </Table>
+      </table>
     );
   }
 }

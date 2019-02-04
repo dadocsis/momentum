@@ -17,7 +17,8 @@ setup(
         'marshmallow-sqlalchemy',
         'passlib',
         'Scrapy==1.5.0',
-        'appdirs==1.4.3'
+        'appdirs==1.4.3',
+        'requests'
     ],
     entry_points={
         'console_scripts': [
