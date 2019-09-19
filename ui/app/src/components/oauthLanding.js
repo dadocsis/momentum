@@ -7,12 +7,18 @@ const oAuthLanding = (props) => {
     if (!window.location.search || props.authUser.token)
         return <Redirect to={{pathname: "/"}}/>;
 
-    // implement a login
+    if (props.fetchError) {
+        return (
+          <div className="alert alert-danger" role="alert">
+            An error occured trying to get a token
+          </div>
+        )
+    }
     const code = params.get("code");
     props.fetchToken(code);
 
 
-    return (<div className="container-fluid">
+    return (props.isFetching && <div className="container-fluid">
         <div className="row">
             <div className="spinner-border" role="status">
                 <span className="sr-only">Loading...</span>

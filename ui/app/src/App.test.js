@@ -31,4 +31,4 @@ describe('fast forward current date', () =>{
     global.Date = MocDate;
       expect(user.isValid).toBeFalsy();
   })
-})
+});

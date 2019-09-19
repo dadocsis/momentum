@@ -1,11 +1,13 @@
 
 
 const ActionType = {
-    AUTHENTICATE: 'AUTHENTICATE',
-    RCV_OAUTH_CODE: 'RCV_OAUTH_CODE',
-    RCV_ACCESS_TOKEN: 'RCV_ACCESS_TOKEN',
-    RCV_USER_INFO: 'RCV_USER_INFO',
-    REQ_USER_INFO: 'REQ_USER_INFO'
+  AUTHENTICATE: 'AUTHENTICATE',
+  RCV_OAUTH_CODE: 'RCV_OAUTH_CODE',
+  RCV_ACCESS_TOKEN: 'RCV_ACCESS_TOKEN',
+  RCV_USER_INFO: 'RCV_USER_INFO',
+  REQ_USER_INFO: 'REQ_USER_INFO',
+  REQ_TOKEN: 'REQ_TOKEN',
+  FETCH_ERROR: 'FETCH_ERROR'
 };
 
 const LANDING = 'http://localhost:5000/oAuth';
@@ -28,7 +30,9 @@ export const fetchToken = (dispatch, code) => {
     data.push('client_id=' + encodeURIComponent(login));
     data.push('redirect_uri=' + encodeURIComponent(LANDING));
     data = data.join('&');
-    //data.append('redirect_uri', LANDING);
+    dispatch({
+      type: ActionType.REQ_TOKEN
+    });
     fetch("https://api.tdameritrade.com/v1/oauth2/token",
     {
         method: "POST",
@@ -38,17 +42,37 @@ export const fetchToken = (dispatch, code) => {
         body: data
     }).then(rsp => rsp.json())
       .then(json => {
-          if (json && json.access_token) dispatch(rcvAccessToken(json))
+        if (json && json.access_token) {
+          dispatch(rcvAccessToken(json))
+        } else {
+          dispatch({type: ActionType.FETCH_ERROR})
+        }
       })
+      .catch(error => {
+          console.log(error);
+          dispatch({type: ActionType.FETCH_ERROR});
+      })
+
 };
 
-export const fetchUserInfo = (dispatch, access_token) =>{
-
+export const fetchUserInfo = (dispatch, access_token) => {
+  fetch("https://api.tdameritrade.com/v1/userprincipals",
+    {
+      headers: { Authorization: "Bearer " + access_token }
+    })
+    .then(rsp => rsp.json())
+    .then(json => {
+      if (json && json.userId) {
+        dispatch(rcvUserInfo(json))
+      } else {
+        dispatch({type: ActionType.FETCH_ERROR})
+      }
+    })
+    .catch(dispatch({type: ActionType.FETCH_ERROR}))
 };
 
 export const rcvAccessToken = (data) => {
-    //todo save access token
-    console.log(data);
+    localStorage.setItem('token', JSON.stringify(data));
     return {
         type: ActionType.RCV_ACCESS_TOKEN,
         accessToken: data
@@ -56,7 +80,7 @@ export const rcvAccessToken = (data) => {
 };
 
 export const rcvUserInfo = (data) => {
-    console.log(data)
+    localStorage.setItem('userInfo', JSON.stringify(data));
     return {
         type: ActionType.RCV_USER_INFO,
         userInfo: data
